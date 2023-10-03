@@ -51,11 +51,11 @@ public class Polinomio {
     public String toString() {
         String rs = new String();
         
-        for (int i = grade - 1; i >= 0; i--) {
+        for (int i = grade; i >= 0; i--) {
             int item = coefficients[i];
         
             if (item != 0) {
-
+                
                 rs += (item < 0) ? "-" : "+";
                 
                 if (i > 0) {
