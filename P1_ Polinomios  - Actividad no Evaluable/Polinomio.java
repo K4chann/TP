@@ -51,7 +51,7 @@ public class Polinomio {
     public String toString() {
         String rs = new String();
         
-        for (int i = coefficients.length - 1; i >= 0; i--) {
+        for (int i = grade - 1; i >= 0; i--) {
             int item = coefficients[i];
         
             if (item != 0) {
