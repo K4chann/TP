@@ -55,10 +55,10 @@ public class Polinomio {
             int item = coefficients[i];
         
             if (item != 0) {
+
+                rs += (item < 0) ? "-" : "+";
                 
                 if (i > 0) {
-                    
-                    rs += (item < 0) ? "-" : "+";
                     
                     rs += ((Math.abs(item) != 1) ? Math.abs(item) + "x" : "x");
                     
@@ -67,7 +67,6 @@ public class Polinomio {
                     }
                     
                 } else {
-                    rs += (item < 0) ? "-" : "+";
                     rs += Math.abs(item);
                 }
             }
