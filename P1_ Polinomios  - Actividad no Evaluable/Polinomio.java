@@ -56,28 +56,31 @@ public class Polinomio {
         
             if (item != 0) {
                 
-                rs += (item < 0) ? "-" : "+";
+                if (item > 0 && i != grade) {
+                    rs += "+";
+                }
                 
                 if (i > 0) {
                     
-                    rs += ((Math.abs(item) != 1) ? Math.abs(item) + "x" : "x");
+                    rs += (
+                        (Math.abs(item) != 1) ? item + "x" :
+                        (item < 0) ? "-x" : "x"
+                    );
                     
                     if (i > 1) {
                         rs += ("^" + i);
                     }
                     
                 } else {
-                    rs += Math.abs(item);
+                    rs += item;
                 }
             }
         }
         
         if (rs.length() == 0) {
             return "0";
-        } else if (rs.length() == 1 || ((Character) rs.charAt(0)).equals('-')) {
-            return rs;
         } else {
-            return rs.substring(1, rs.length());
+            return rs;
         }
     }
     
