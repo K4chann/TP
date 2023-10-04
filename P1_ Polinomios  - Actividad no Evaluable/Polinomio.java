@@ -98,8 +98,9 @@ public class Polinomio {
     //Método que suma dos polinomios
     public Polinomio suma(Object pol) {
         if (pol !instanceof Polinomio) {
-            //////
+            throw new Illegal­Argument­Exception("El objeto dado tiene que se un Polinomio.");
         }
+        
         Polinomio polinomio = (Polinomio) pol;
         
         int[] polCoeff = pol.coeficientes();
