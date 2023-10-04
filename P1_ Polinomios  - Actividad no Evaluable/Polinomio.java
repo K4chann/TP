@@ -121,7 +121,13 @@ public class Polinomio {
     }
     
     //Método que resta dos polinomios
-    public Polinomio resta(Polinomio pol) {
+    public Polinomio resta(Object pol) {
+        if (pol !instanceof Polinomio) {
+            throw new Illegal­Argument­Exception("El objeto dado tiene que se un Polinomio.");
+        }
+        
+        Polinomio polinomio = (Polinomio) pol;
+        
         int[] polCoeff = pol.coeficientes();
         
         int maxLen = Math.max(polCoeff.length, coefficients.length);
