@@ -96,7 +96,12 @@ public class Polinomio {
     }
     
     //Método que suma dos polinomios
-    public Polinomio suma(Polinomio pol) {
+    public Polinomio suma(Object pol) {
+        if (pol !instanceof Polinomio) {
+            //////
+        }
+        Polinomio polinomio = (Polinomio) pol;
+        
         int[] polCoeff = pol.coeficientes();
         
         int maxLen = Math.max(polCoeff.length, coefficients.length);
