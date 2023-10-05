@@ -55,28 +55,22 @@ public class Polinomio {
             int item = coefficients[i];
         
             if (item != 0) {
-                
                 if (item > 0 && i != grade) {
                     rs += "+";
                 }
-                
                 if (i > 0) {
-                    
                     rs += (
                         (Math.abs(item) != 1) ? item + "x" :
                         (item < 0) ? "-x" : "x"
                     );
-                    
                     if (i > 1) {
                         rs += ("^" + i);
                     }
-                    
                 } else {
                     rs += item;
                 }
             }
         }
-        
         if (rs.length() == 0) {
             return "0";
         } else {
