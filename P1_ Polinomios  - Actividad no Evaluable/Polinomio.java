@@ -90,13 +90,7 @@ public class Polinomio {
     }
     
     //Método que suma dos polinomios
-    public Polinomio suma(Object pol) {
-        if (pol !instanceof Polinomio) {
-            throw new Illegal­Argument­Exception("El objeto dado tiene que se un Polinomio.");
-        }
-        
-        Polinomio polinomio = (Polinomio) pol;
-        
+    public Polinomio suma(Polinomio pol) {
         int[] polCoeff = pol.coeficientes();
         
         int maxLen = Math.max(polCoeff.length, coefficients.length);
@@ -115,13 +109,7 @@ public class Polinomio {
     }
     
     //Método que resta dos polinomios
-    public Polinomio resta(Object pol) {
-        if (pol !instanceof Polinomio) {
-            throw new Illegal­Argument­Exception("El objeto dado tiene que se un Polinomio.");
-        }
-        
-        Polinomio polinomio = (Polinomio) pol;
-        
+    public Polinomio resta(Polinomio pol) {
         int[] polCoeff = pol.coeficientes();
         
         int maxLen = Math.max(polCoeff.length, coefficients.length);
